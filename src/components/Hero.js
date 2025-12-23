@@ -1,12 +1,13 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import Image from "../WhatsApp Image 2025-10-01 at 12.15.25_f0a36872.jpg";
+import Image from "../character.png";
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaReddit,
   FaTwitter,
+  FaCircle,
 } from "react-icons/fa";
 
 const Hero = () => {
@@ -17,6 +18,7 @@ const Hero = () => {
         {" "}
         <div className="home-content">
           {" "}
+          <p>Hallo! ich heiße...</p>
           <h1>Pranam Jain</h1>{" "}
           <div className="typewriter">
             {" "}
@@ -41,10 +43,6 @@ const Hero = () => {
             >
               {" "}
               <FaGithub className="github" />{" "}
-            </a>{" "}
-            <a href="mailto:pranam.jain@hof-university.de">
-              {" "}
-              <FaEnvelope className="mail" />{" "}
             </a>{" "}
             <a
               href="https://linkedin.com/in/pranamjain"
@@ -71,6 +69,14 @@ const Hero = () => {
               <FaReddit className="reddit" />{" "}
             </a>{" "}
           </div>{" "}
+          <div className="hero-tags">
+            <div className="tag work">
+              <FaCircle className="icon" /> Open to Work
+            </div>
+            <a href="mailto:jain.pranamm@gmail.com" className="tag email">
+              <FaEnvelope className="icon" /> Send Email
+            </a>
+          </div>
         </div>{" "}
         <div className="hero-image">
           {" "}

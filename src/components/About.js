@@ -29,7 +29,7 @@ const About = () => {
             Technique, REST APIs, and performance optimization, with industry
             experience in full-stack development.
           </p>
-          <p className="about-text">
+          <p className="about-language">
             <b>Languages: English (C1), German (B1), Hindi (Native)</b>
           </p>
 
