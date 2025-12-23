@@ -1363,7 +1363,6 @@ body::before {
 
 .legal {
   padding: 6rem 0;
-  background: #000;
 }
 
 .legal-container {
@@ -1376,30 +1375,28 @@ body::before {
   display: inline-block;
   margin-bottom: 2rem;
   font-size: 0.9rem;
-  color: #374151;
+  color: #F44747;
   text-decoration: none;
-}
-
-.back-link:hover {
-  color: #5EEAD4;
 }
 
 /* Title */
 .legal-container h1 {
   font-size: 3rem;
   font-weight: 700;
+  color: #ffffff;
   margin-bottom: 0.6rem;
 }
 
 .last-updated {
   font-size: 0.9rem;
-  color: #5EEAD4;
+  color: #7b818d;
   margin-bottom: 3rem;
 }
 
 /* Content */
 .legal-content h2 {
   font-size: 1.5rem;
+  color: #5EEAD4;
   font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 0.8rem;
@@ -1408,7 +1405,7 @@ body::before {
 .legal-content p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #374151;
+  color: #e5e7eb;
   max-width: 100%;
 }
 
