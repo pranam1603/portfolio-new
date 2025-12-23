@@ -1,0 +1,75 @@
+import React from "react";
+import { FaReact, FaCogs, FaCode, FaBrain } from "react-icons/fa";
+
+import allSkills from "../data/allSkills";
+
+const About = () => {
+  return (
+    <section className="about" id="about">
+      <div className="about-container">
+        {/* LEFT */}
+        <div className="about-left">
+          <div className="badge">✦ About Me</div>
+
+          <h2 className="about-title">
+            Building clean, reliable solutions with a focus on impact
+          </h2>
+
+          <p className="about-text">
+            Software Engineer and Applied ML Researcher with hands-on experience
+            in Java, Python, and PyTorch, Neural Network, specializing in
+            data-driven systems, geospatial analysis, and scalable ML
+            pipelines.Currently a Student Assistant at IISYS, Hochschule Hof,
+            working on key performance indicator for commuter mobility
+            estimation using large-scale real-world data.{" "}
+          </p>
+
+          <p className="about-text">
+            Strong background in backend development, Machine Learning
+            Technique, REST APIs, and performance optimization, with industry
+            experience in full-stack development.
+          </p>
+          <p className="about-text">
+            <b>Languages: English (C1), German (B1), Hindi (Native)</b>
+          </p>
+
+          {/* SKILLS */}
+          <div className="about-skills">
+            {allSkills.map((skill) => {
+              return (
+                <span>
+                  {skill.icon} {skill.name}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="about-right">
+          <div className="service-card">
+            <FaCogs />
+            <h4>Research & Development</h4>
+          </div>
+
+          <div className="service-card">
+            <FaCode />
+            <h4>Programming</h4>
+          </div>
+
+          <div className="service-card">
+            <FaBrain />
+            <h4>ML & AI</h4>
+          </div>
+
+          <div className="service-card">
+            <FaReact />
+            <h4>Software Development</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
