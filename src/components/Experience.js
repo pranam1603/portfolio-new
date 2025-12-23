@@ -30,7 +30,7 @@ const experienceData = [
   {
     id: "Star Catalysts",
     company: "STAR CATALYSTS",
-    role: "Software Developer",
+    role: "Software Developer Intern",
     date: "September 2021 – April 2022",
     points: [
       "Built software solutions from scratch, including backend APIs and core application logic.",
