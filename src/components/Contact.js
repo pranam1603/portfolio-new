@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
-  const [state, handleSubmit, reset] = useForm("xzdpjnjq");
+  const [state, handleSubmit] = useForm("xzdpjnjq");
 
   return (
     <section className="contact" id="contact">
