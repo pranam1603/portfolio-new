@@ -1,53 +1,9 @@
 import React, { useState } from "react";
-
-const educationData = {
-  education: {
-    title: "Education",
-    items: [
-      {
-        degree: "M.Sc. Applied Research in Computer Science",
-        institute: "Hochschule Hof, Germany",
-        date: "2025 – Present",
-        details: [
-          "Grade: 1.9",
-          "Core Subjects: Data Engineering and Analysis, IT-Security, Design Science & Behavioural Aproaches in Computer Science, Research Project",
-        ],
-      },
-      {
-        degree: "B.Tech in Computer Science and Engineering",
-        institute: "RGPV University, India",
-        date: "2019 – 2023",
-        details: [
-          "Grade: 7.85 CGPA",
-          "Bachelor Thesis: Developed a full-stack Event Management Web Application using the MERN stack, enabling organizers to manage event activities, service providers, and user workflows efficiently.",
-        ],
-      },
-    ],
-  },
-  certifications: {
-    title: "Certifications",
-    items: [
-      {
-        degree: "Web Development Bootcamp",
-        institute: "Angela Yu (Udemy)",
-        date: "2023",
-        details: [
-          "Gained practical experience in modern web development fundamentals and full-stack workflows through hands-on projects.",
-        ],
-      },
-      {
-        degree: "Git & GitHub",
-        institute: "Google",
-        date: "2022",
-        details: [
-          "Learned version control fundamentals including Git workflows, branching, merging, pull requests, and collaborative development using GitHub.",
-        ],
-      },
-    ],
-  },
-};
+import { useLanguage } from "../context/LanguageContext";
+import { eduText } from "../data/text";
 
 const Education = () => {
+  const { lang } = useLanguage();
   const [activeTab, setActiveTab] = useState("education");
 
   return (
@@ -55,8 +11,8 @@ const Education = () => {
       <div className="education-container">
         {/* Header */}
         <div className="education-header">
-          <div className="badge">✦ Education</div>
-          <h2 className="education-title">Academic Background</h2>
+          <div className="badge">✦ {eduText[lang].eduBadge}</div>
+          <h2 className="education-title">{eduText[lang].eduTitle}</h2>
         </div>
 
         {/* Tabs */}
@@ -65,19 +21,19 @@ const Education = () => {
             className={activeTab === "education" ? "active" : ""}
             onClick={() => setActiveTab("education")}
           >
-            Education
+            {eduText[lang].eduButtons[0]}
           </button>
           <button
             className={activeTab === "certifications" ? "active" : ""}
             onClick={() => setActiveTab("certifications")}
           >
-            Certifications
+            {eduText[lang].eduButtons[1]}
           </button>
         </div>
 
         {/* Content */}
         <div className="education-content">
-          {educationData[activeTab].items.map((item, index) => (
+          {eduText[lang].eduData[activeTab].items.map((item, index) => (
             <div className="education-card" key={index}>
               <h3>{item.degree}</h3>
               <p className="education-institute">{item.institute}</p>

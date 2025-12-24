@@ -1,6 +1,9 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Image from "../character.png";
+import { useLanguage } from "../context/LanguageContext";
+import { heroText } from "../data/text";
+
 import {
   FaGithub,
   FaLinkedin,
@@ -11,6 +14,8 @@ import {
 } from "react-icons/fa";
 
 const Hero = () => {
+  const { lang } = useLanguage();
+  let roles = heroText[lang].roles;
   return (
     <div id="home" className="home">
       {" "}
@@ -18,17 +23,13 @@ const Hero = () => {
         {" "}
         <div className="home-content">
           {" "}
-          <p>Hallo! ich heiße...</p>
-          <h1>Pranam Jain</h1>{" "}
+          <p>{heroText[lang].heroSubtitle}</p>
+          <h1>{heroText[lang].heroTitle}</h1>{" "}
           <div className="typewriter">
             {" "}
             <Typewriter
               options={{
-                strings: [
-                  " a Master Student. ",
-                  " a Researcher",
-                  "a Software Engineer",
-                ],
+                strings: roles,
                 autoStart: true,
                 loop: true,
               }}
@@ -71,10 +72,10 @@ const Hero = () => {
           </div>{" "}
           <div className="hero-tags">
             <div className="tag work">
-              <FaCircle className="icon" /> Open to Work
+              <FaCircle className="icon" /> {heroText[lang].buttons[0]}
             </div>
             <a href="mailto:jain.pranamm@gmail.com" className="tag email">
-              <FaEnvelope className="icon" /> Send Email
+              <FaEnvelope className="icon" /> {heroText[lang].buttons[1]}
             </a>
           </div>
         </div>{" "}

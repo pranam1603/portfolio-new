@@ -63,6 +63,14 @@ body::before {
   /* margin-top: 1rem; */
 }
 
+/* .lang-btn {
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+} */
+
 .nav-container {
   width: 70%;
   margin: 0 auto;
@@ -1578,4 +1586,47 @@ body::before {
   height: 4px;
   background: linear-gradient(90deg, #60a5fa, #22c55e);
   z-index: 9999;
+}
+
+/* LanguageToggle */
+
+.language-toggle {
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+
+.language-toggle button {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.language-toggle button:hover {
+  background: #5EEAD4;
+  color: #000;
+  border-color: #5EEAD4;
+}
+
+.language-toggle button.active {
+  background: #5EEAD4;
+  color: #000;
+  border-color: #5EEAD4;
 }

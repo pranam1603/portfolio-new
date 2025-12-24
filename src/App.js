@@ -8,11 +8,13 @@ import Terms from "./pages/Terms";
 import Blog1 from "./pages/MovieRecommendationBlog";
 import Blog2 from "./pages/BeginnerMistakesBlog";
 import ScrollProgress from "./components/ScrollProgress";
+import LanguageToggle from "./components/LanguageToggle";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollProgress />
+      <LanguageToggle />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

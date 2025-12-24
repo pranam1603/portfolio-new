@@ -9,63 +9,61 @@ import {
   FaGithub,
   FaReddit,
 } from "react-icons/fa";
+import { contactText } from "../data/text";
+import { useLanguage } from "../context/LanguageContext";
 
 const Contact = () => {
+  const { lang } = useLanguage();
   const [state, handleSubmit] = useForm("xzdpjnjq");
 
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        <div className="badge">✦ Contact</div>
+        <div className="badge">✦ {contactText[lang].contactBadge}</div>
         {/* Header */}
-        <h2 className="contact-title">Get in Touch</h2>
-        <p className="contact-subtitle">
-          I'd love to connect with you and discuss how we can transform our
-          thoughts.
-        </p>
+        <h2 className="contact-title">{contactText[lang].contactTitle}</h2>
+        <p className="contact-subtitle">{contactText[lang].contactSubtitle}</p>
         {/* Grid */}
         <div className="contact-grid">
           {/* Left: Form */}
           <div className="contact-card">
-            <h3>Send us a message</h3>
-            <p className="card-desc">
-              Fill out the form below and I'll get back to you as soon as
-              possible.
-            </p>
+            <h3>{contactText[lang].contactFormTitle}</h3>
+            <p className="card-desc">{contactText[lang].contactFormSubTitle}</p>
 
             <form onSubmit={handleSubmit} className="contact-form">
-              <label for="name">Your Name</label>
+              <label for="name">{contactText[lang].contactFormName}</label>
               <input
                 id="name"
                 name="Name"
                 type="text"
-                placeholder="Enter your full name"
+                placeholder={contactText[lang].contactFormSubName}
               />
 
-              <label for="email">Email</label>
+              <label for="email">{contactText[lang].contactFormEmail}</label>
               <input
                 id="email"
                 name="Email"
                 type="email"
-                placeholder="your.email@domain.com"
+                placeholder={contactText[lang].contactFormSubEmail}
               />
 
-              <label for="message">Message</label>
+              <label for="message">
+                {contactText[lang].contactFormMessage}
+              </label>
               <textarea
                 id="message"
                 name="Message"
-                placeholder="How can we help you?"
+                placeholder={contactText[lang].contactFormSubMessage}
                 rows="4"
               ></textarea>
 
               {state.succeeded ? (
                 <p className="form-message">
-                  Thanks for connecting, I’ll come back to you!
+                  {contactText[lang].contactMessage}
                 </p>
               ) : (
                 <button disabled={state.submitting} type="submit">
-                  <FaPaperPlane />
-                  Send Message
+                  <FaPaperPlane /> {contactText[lang].contactSend}
                 </button>
               )}
             </form>
@@ -75,9 +73,9 @@ const Contact = () => {
           <div className="contact-right">
             {/* Info */}
             <div className="contact-card">
-              <h3>Contact Information</h3>
+              <h3>{contactText[lang].contactInfoTitle}</h3>
               <p className="card-desc">
-                Reach out to me through any of these channels.
+                {contactText[lang].contactInfoSubTitle}
               </p>
 
               <div className="info-item">
@@ -85,7 +83,7 @@ const Contact = () => {
                   <FaEnvelope />
                 </div>
                 <div>
-                  <strong>Email</strong>
+                  <strong>{contactText[lang].contactInfoMail}</strong>
                   <p>pranam.jain@hof-university.de</p>
                   <p>jain.pranamm@gmail.com</p>
                 </div>
@@ -96,17 +94,17 @@ const Contact = () => {
                   <FaMapMarkerAlt />
                 </div>
                 <div>
-                  <strong>Location</strong>
-                  <p>Hof, Germany</p>
+                  <strong>{contactText[lang].contactLocation}</strong>
+                  <p>{contactText[lang].contactCountry}</p>
                 </div>
               </div>
             </div>
 
             {/* Social */}
             <div className="contact-card">
-              <h3>Follow Me</h3>
+              <h3>{contactText[lang].contactFollow}</h3>
               <p className="card-desc">
-                Connect with me on social media for updates and insights.
+                {contactText[lang].contactFollowSubTitle}
               </p>
 
               <div className="social-icons">

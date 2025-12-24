@@ -1,7 +1,11 @@
 import React from "react";
 import Logo from "../logob&w.png";
+import { footerText } from "../data/text";
+import { useLanguage } from "../context/LanguageContext";
 
 const Footer = () => {
+  const { lang } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -11,14 +15,12 @@ const Footer = () => {
         </div>
 
         {/* CENTER */}
-        <div className="footer-center">
-          © 2025 All rights reserved. • Made with ❤️ by Pranam Jain
-        </div>
+        <div className="footer-center">{footerText[lang].footerReserve}</div>
 
         {/* RIGHT */}
         <div className="footer-right">
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
+          <a href="/privacy">{footerText[lang].footerTerms}</a>
+          <a href="/terms">{footerText[lang].footerPrivacy}</a>
         </div>
       </div>
     </footer>

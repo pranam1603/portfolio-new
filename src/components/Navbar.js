@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Logo from "../logob&w.png";
 import { useNavigate, useLocation } from "react-router-dom";
+import { navText } from "../data/text";
+import { useLanguage } from "../context/LanguageContext";
 
 const Navbar = () => {
+  const { lang } = useLanguage();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -35,24 +38,34 @@ const Navbar = () => {
         {/* Links */}
         <ul className={`nav-right ${open ? "open" : ""}`}>
           <li>
-            <button onClick={() => handleScroll("home")}>Home</button>
-          </li>
-          <li>
-            <button onClick={() => handleScroll("about")}>About</button>
-          </li>
-          <li>
-            <button onClick={() => handleScroll("academic")}>Academic</button>
-          </li>
-          <li>
-            <button onClick={() => handleScroll("experience")}>
-              Experience
+            <button onClick={() => handleScroll("home")}>
+              {navText[lang].navHome}
             </button>
           </li>
           <li>
-            <button onClick={() => handleScroll("projects")}>Projects</button>
+            <button onClick={() => handleScroll("about")}>
+              {navText[lang].navAbout}
+            </button>
           </li>
           <li>
-            <button onClick={() => handleScroll("contact")}>Contact</button>
+            <button onClick={() => handleScroll("academic")}>
+              {navText[lang].navAcademic}
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleScroll("experience")}>
+              {navText[lang].navExperience}
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleScroll("projects")}>
+              {navText[lang].navProjects}
+            </button>
+          </li>
+          <li>
+            <button onClick={() => handleScroll("contact")}>
+              {navText[lang].navContact}
+            </button>
           </li>
         </ul>
 

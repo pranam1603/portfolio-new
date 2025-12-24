@@ -2,34 +2,25 @@ import React from "react";
 import { FaReact, FaCogs, FaCode, FaBrain } from "react-icons/fa";
 
 import allSkills from "../data/allSkills";
+import { aboutText } from "../data/text.js";
+import { useLanguage } from "../context/LanguageContext.js";
 
 const About = () => {
+  const { lang } = useLanguage();
   return (
     <section className="about" id="about">
       <div className="about-container">
         {/* LEFT */}
         <div className="about-left">
-          <div className="badge">✦ About Me</div>
+          <div className="badge">✦ {aboutText[lang].aboutBadge}</div>
 
-          <h2 className="about-title">
-            Building clean, reliable solutions with a focus on impact
-          </h2>
+          <h2 className="about-title">{aboutText[lang].aboutTitle}</h2>
 
-          <p className="about-text">
-            Software Engineer and Applied Machine Learning Researcher with
-            hands-on experience building data-driven systems using Java, Python,
-            and modern ML techniques. Currently working as a Student Assistant
-            at IISYS, Hochschule Hof, contributing to research on commuter
-            mobility estimation using large-scale real-world data.{" "}
-          </p>
-
-          <p className="about-text">
-            Strong background in backend development, REST APIs, performance
-            optimization, and applied machine learning, with industry exposure
-            to full-stack systems.
-          </p>
+          {aboutText[lang].aboutTexts.map((text) => {
+            return <p className="about-text">{text}</p>;
+          })}
           <p className="about-language">
-            <b>Languages: English (C1), German (B1), Hindi (Native)</b>
+            <b>{aboutText[lang].aboutLanguage}</b>
           </p>
 
           {/* SKILLS */}
@@ -48,22 +39,22 @@ const About = () => {
         <div className="about-right">
           <div className="service-card">
             <FaCogs />
-            <h4>Research & Development</h4>
+            <h4>{aboutText[lang].aboutTabs[0]}</h4>
           </div>
 
           <div className="service-card">
             <FaCode />
-            <h4>Programming</h4>
+            <h4>{aboutText[lang].aboutTabs[1]}</h4>
           </div>
 
           <div className="service-card">
             <FaBrain />
-            <h4>ML & AI</h4>
+            <h4>{aboutText[lang].aboutTabs[2]}</h4>
           </div>
 
           <div className="service-card">
             <FaReact />
-            <h4>Software Development</h4>
+            <h4>{aboutText[lang].aboutTabs[3]}</h4>
           </div>
         </div>
       </div>

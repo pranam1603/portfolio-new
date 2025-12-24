@@ -1,28 +1,27 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { blogText } from "../data/text";
 
 const Insights = () => {
+  const { lang } = useLanguage();
+
   return (
     <section className="insights">
       <div className="insights-container">
         {/* Top badge */}
-        <div className="badge">✦ Blog</div>
+        <div className="badge">✦ {blogText[lang].blogBadge}</div>
 
         {/* Heading */}
-        <h2 className="insights-title">
-          Latest <span>Insights</span>
-        </h2>
-        <p className="insights-subtitle">
-          Explore my thoughts on AI, Technology, and Learning Journey of my
-          career.
-        </p>
+        <h2 className="insights-title">{blogText[lang].blogTitle}</h2>
+        <p className="insights-subtitle">{blogText[lang].blogSubtitle}</p>
 
         {/* Cards */}
         <div className="insights-grid">
           {/* Card 1 */}
           <div className="insight-card">
             <div className="card-meta">
-              <span>📅 December 20, 2025</span>
-              <span>⏱ 7 minutes read</span>
+              <span>📅 {blogText[lang].blogData[0].date}</span>
+              <span>⏱ {blogText[lang].blogData[0].time}</span>
             </div>
 
             <h3>
@@ -39,7 +38,7 @@ const Insights = () => {
             <div className="card-footer">
               <span className="ai-tag">👤 Pranam Jain</span>
               <a href="/blog/What-I-Learned-Building-a-Movie-Recommendation-App-from-Scratch">
-                Read more →
+                {blogText[lang].blogRead} →
               </a>
             </div>
 
@@ -54,8 +53,8 @@ const Insights = () => {
           {/* Card 2 */}
           <div className="insight-card">
             <div className="card-meta">
-              <span>📅 October 18, 2025</span>
-              <span>⏱ 5 minutes read</span>
+              <span>📅 {blogText[lang].blogData[1].date}</span>
+              <span>⏱ {blogText[lang].blogData[1].time}</span>
             </div>
 
             <h3>
@@ -72,7 +71,7 @@ const Insights = () => {
             <div className="card-footer">
               <span className="ai-tag">👤 Pranam Jain</span>
               <a href="/blog/Common-Mistakes-I-Made-as-a-Beginner-Developer">
-                Read more →
+                {blogText[lang].blogRead} →
               </a>
             </div>
 
