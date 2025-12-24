@@ -70,24 +70,24 @@ const allSkills = [
     name: "Neural Network",
   },
   {
-    icon: <FaCube />,
-    name: "Python Libraries",
-  },
-  {
     icon: <FaGit />,
     name: "GIT",
+  },
+  {
+    icon: <FaCube />,
+    name: "Python Libraries",
   },
   {
     icon: <FaFile />,
     name: "GTFS",
   },
   {
-    icon: <FaGithub />,
-    name: "GitHub & GitLab",
-  },
-  {
     icon: <FaJira />,
     name: "JIRA",
+  },
+  {
+    icon: <FaGithub />,
+    name: "GitHub & GitLab",
   },
   {
     icon: <FaMap />,

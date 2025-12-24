@@ -18,10 +18,10 @@ const About = () => {
           <p className="about-text">
             Software Engineer and Applied ML Researcher with hands-on experience
             in Java, Python, and PyTorch, Neural Network, specializing in
-            data-driven systems, geospatial analysis, and scalable ML
-            pipelines.Currently a Student Assistant at IISYS, Hochschule Hof,
-            working on key performance indicator for commuter mobility
-            estimation using large-scale real-world data.{" "}
+            data-driven systems, geospatial analysis, and scalable ML pipelines.
+            Currently a Student Assistant at IISYS, Hochschule Hof, working on
+            key performance indicator for commuter mobility estimation using
+            large-scale real-world data.{" "}
           </p>
 
           <p className="about-text">

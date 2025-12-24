@@ -240,13 +240,13 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 0.8rem;
   color: #e5e7eb;
   cursor: pointer;
 }
 
 .hero-tags .tag .icon{
-  margin-right: 0.4rem;
+  margin-right: 0.6rem;
 }
 
 .hero-tags .work .icon{
@@ -254,13 +254,13 @@ body::before {
   font-size: 0.6rem;
 }
 
-.hero-tags .work:hover .icon{
+/* .hero-tags .work:hover .icon{
   color: #e5e7eb;
 }
 
 .hero-tags .work:hover{
   background-color: #34A853;
-}
+} */
 
 .hero-tags .email:hover .icon{
   color: #e5e7eb;
@@ -337,6 +337,10 @@ body::before {
     margin-bottom: 2rem;
     width: 90%;
     height: 40%;
+  }
+
+  .home-content h1{
+    font-size: 3.2rem;
   }
 
   .home-content {
@@ -447,7 +451,12 @@ body::before {
 /* Responsive */
 @media (max-width: 900px) {
   .insights-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .insight-card{
+    padding: 1.6rem;
   }
 
   .insights-title {
@@ -722,9 +731,9 @@ body::before {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .about-container {
-    width: 92%;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    width: 90%;
+    display: flex;
+  flex-direction: column;
   }
 
   .about-title {
@@ -738,6 +747,7 @@ body::before {
 
 @media (max-width: 500px) {
   .about-right {
+    gap: 1.2rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1278,6 +1288,10 @@ body::before {
 
   .education-content {
     grid-template-columns: 1fr;
+  }
+
+  .education-card{
+    padding: 1.6rem;
   }
 
   .education-title {

@@ -53,9 +53,7 @@ const Projects = () => {
               key={tag}
               className={tag === activeTag ? "active" : ""}
               onClick={() => {
-                {
-                  tag == "html css" ? setActiveTag("html") : setActiveTag(tag);
-                }
+                tag === "html css" ? setActiveTag("html") : setActiveTag(tag);
                 setStartIndex(0);
               }}
             >

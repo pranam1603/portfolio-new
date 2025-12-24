@@ -44,7 +44,7 @@ const Insights = () => {
             </div>
 
             <div className="tags">
-              <span>Machine Learning</span>
+              <span>ML</span>
               <span>NLP</span>
               <span>Python</span>
               <span>Projects</span>
@@ -78,8 +78,8 @@ const Insights = () => {
 
             <div className="tags">
               <span>Learning</span>
-              <span>Software Engineering</span>
-              <span>Machine Learning</span>
+              <span>SDE</span>
+              <span>ML</span>
               <span>Career</span>
             </div>
           </div>
