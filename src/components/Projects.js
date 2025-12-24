@@ -44,7 +44,7 @@ const Projects = () => {
     <section className="projects" id="projects">
       <div className="projects-container">
         <div className="badge">✦ Portfolio</div>
-        <h2 className="projects-title">Our Projects</h2>
+        <h2 className="projects-title">My Projects</h2>
 
         {/* FILTER TAGS */}
         <div className="project-tabs">

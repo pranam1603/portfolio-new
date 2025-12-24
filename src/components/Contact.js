@@ -56,7 +56,9 @@ const Contact = () => {
               ></textarea>
 
               {state.succeeded ? (
-                <p>Thanks for connecting, I’ll come back to you!</p>
+                <p className="form-message">
+                  Thanks for connecting, I’ll come back to you!
+                </p>
               ) : (
                 <button disabled={state.submitting} type="submit">
                   <FaPaperPlane />

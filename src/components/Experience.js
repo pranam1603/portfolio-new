@@ -17,7 +17,7 @@ const experienceData = [
   {
     id: "Nalnda",
     company: "Nalnda",
-    role: "Software Developer",
+    role: "Software Developer Engineer",
     date: "June 2023 – May 2024",
     points: [
       "Built backend services and automation workflows to integrate structured data via REST APIs, improving data availability across internal systems.",

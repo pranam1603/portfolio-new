@@ -492,6 +492,11 @@ body::before {
   text-align: left;
 }
 
+.form-message{
+  margin-top: 1rem;
+  color: #e5e7eb;
+}
+
 /* Card */
 .contact-card {
   background: #0f1117;
@@ -816,7 +821,7 @@ body::before {
 
 /* NAV BUTTONS */
 .nav-btn {
-  width: 42px;
+  width: 46px;
   height: 42px;
   border-radius: 50%;
   border: none;
@@ -1086,6 +1091,7 @@ body::before {
 .experience-right h3 {
   font-size: 2.1rem;
   color: #5EEAD4;
+  letter-spacing: 1px;
   margin-bottom: 0.7rem;
   font-weight: 600;
 }
@@ -1418,5 +1424,102 @@ body::before {
 
   .legal-container h1 {
     font-size: 2.4rem;
+  }
+}
+
+/* Blog */
+
+.blog {
+  padding: 4rem 0;
+}
+
+.blog-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.blog-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #F44747;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.blog-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.blog-tags span {
+  background: #f3f4f6;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.blog-content p {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+  margin-bottom: 0.8rem;
+}
+
+.blog-content ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+}
+
+.blog-content blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 4px solid #5EEAD4;
+  color: #5EEAD4;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .blog-container {
+    width: 85%;
+  }
+
+  .blog-title {
+    font-size: 2.2rem;
   }
 }
