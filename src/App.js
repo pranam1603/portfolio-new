@@ -7,10 +7,12 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Blog1 from "./pages/MovieRecommendationBlog";
 import Blog2 from "./pages/BeginnerMistakesBlog";
+import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollProgress />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

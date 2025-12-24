@@ -34,22 +34,25 @@ const Contact = () => {
             </p>
 
             <form onSubmit={handleSubmit} className="contact-form">
-              <label>Your Name</label>
+              <label for="name">Your Name</label>
               <input
+                id="name"
                 name="Name"
                 type="text"
                 placeholder="Enter your full name"
               />
 
-              <label>Email</label>
+              <label for="email">Email</label>
               <input
+                id="email"
                 name="Email"
                 type="email"
-                placeholder="your.email@company.com"
+                placeholder="your.email@domain.com"
               />
 
-              <label>Description</label>
+              <label for="message">Message</label>
               <textarea
+                id="message"
                 name="Message"
                 placeholder="How can we help you?"
                 rows="4"

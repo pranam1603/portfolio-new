@@ -1,51 +1,62 @@
 import React, { useState } from "react";
 import Logo from "../logob&w.png";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScroll = (id) => {
+    setOpen(false);
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 120);
+    } else {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-left">
-          <a href="/">
-            <img src={Logo} alt="Pranam Jain" className="nav-logo" />
-          </a>
+        {/* Logo */}
+        <div className="nav-left" onClick={() => handleScroll("home")}>
+          <img src={Logo} alt="Pranam Jain" className="nav-logo" />
         </div>
 
+        {/* Links */}
         <ul className={`nav-right ${open ? "open" : ""}`}>
           <li>
-            <a href="/#home" onClick={() => setOpen(false)}>
-              Home
-            </a>
+            <button onClick={() => handleScroll("home")}>Home</button>
           </li>
           <li>
-            <a href="/#about" onClick={() => setOpen(false)}>
-              About
-            </a>
+            <button onClick={() => handleScroll("about")}>About</button>
           </li>
           <li>
-            <a href="/#academic" onClick={() => setOpen(false)}>
-              Academic
-            </a>
+            <button onClick={() => handleScroll("academic")}>Academic</button>
           </li>
           <li>
-            <a href="/#experience" onClick={() => setOpen(false)}>
-              Experiance
-            </a>
+            <button onClick={() => handleScroll("experience")}>
+              Experience
+            </button>
           </li>
           <li>
-            <a href="/#projects" onClick={() => setOpen(false)}>
-              Projects
-            </a>
+            <button onClick={() => handleScroll("projects")}>Projects</button>
           </li>
           <li>
-            <a href="/#contact" onClick={() => setOpen(false)}>
-              Contact
-            </a>
+            <button onClick={() => handleScroll("contact")}>Contact</button>
           </li>
         </ul>
 
+        {/* Hamburger */}
         <div
           className={`hamburger ${open ? "active" : ""}`}
           onClick={() => setOpen(!open)}
