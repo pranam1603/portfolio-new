@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa";
 
 import projectsData from "../data/allProjects";
+import { projectText } from "../data/text";
+import { useLanguage } from "../context/LanguageContext";
 
 const allTags = ["all", "node", "java", "react", "python & ml", "html css"];
 
@@ -15,6 +17,7 @@ const ITEMS_PER_PAGE = 3;
 const Projects = () => {
   const [activeTag, setActiveTag] = useState("all");
   const [startIndex, setStartIndex] = useState(0);
+  const { lang } = useLanguage();
 
   const filteredProjects =
     activeTag === "all"
@@ -44,7 +47,7 @@ const Projects = () => {
     <section className="projects" id="projects">
       <div className="projects-container">
         <div className="badge">✦ Portfolio</div>
-        <h2 className="projects-title">My Projects</h2>
+        <h2 className="projects-title">{projectText[lang].projectTitle}</h2>
 
         {/* FILTER TAGS */}
         <div className="project-tabs">

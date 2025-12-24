@@ -24,12 +24,7 @@ export const aboutText = {
     ],
     aboutLanguage:
       "Sprachen: Englisch (C1), Deutsch (B1), Hindi (Muttersprache)",
-    aboutTabs: [
-      "Forschung und Entwicklung",
-      "Programmierung",
-      "ML und KI",
-      "Softwareentwicklung",
-    ],
+    aboutTabs: ["R&D", "Programmierung", "ML & KI", "Softwareentwicklung"],
   },
   en: {
     aboutBadge: "About Me",
@@ -39,12 +34,16 @@ export const aboutText = {
       "Strong background in backend development, REST APIs, performance optimization, and applied machine learning, with industry exposure to full-stack systems.",
     ],
     aboutLanguage: "Languages: English (C1), German (B1), Hindi (Native)",
-    aboutTabs: [
-      "Research & Development",
-      "Programming",
-      "ML & AI",
-      "Software Development",
-    ],
+    aboutTabs: ["R & D", "Programming", "ML & AI", "Software Development"],
+  },
+};
+
+export const projectText = {
+  en: {
+    projectTitle: "My Projects",
+  },
+  de: {
+    projectTitle: "Meine Projekte",
   },
 };
 
