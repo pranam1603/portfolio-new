@@ -4,9 +4,9 @@ const projectsData = [
     subtitle: "Full Stack Web Application",
     description:
       "A large-scale campground platform with authentication, reviews, image uploads, and MongoDB-based data management.",
-    tags: ["node", "express", "mongo", "bootstrap"],
-    code: "https://github.com/pranam1603/yelpCamp_code",
-    live: "https://quiet-eyrie-98125.herokuapp.com/",
+    tags: ["node", "express", "mongo", "cloudinary"],    
+    code: "https://github.com/pranam1603/yelpcamp",
+    live: "https://yelpcamp-h287.onrender.com/",
   },
   {
     title: "Movie Recommendation App",
