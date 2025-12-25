@@ -10,7 +10,7 @@ import projectsData from "../data/allProjects";
 import { projectText } from "../data/text";
 import { useLanguage } from "../context/LanguageContext";
 
-const allTags = ["all", "node", "java", "react", "python & ml", "html css"];
+const allTags = ["all", "node", "java", "react", "python & ml"];
 
 const ITEMS_PER_PAGE = 3;
 
