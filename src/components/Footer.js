@@ -15,7 +15,11 @@ const Footer = () => {
         </div>
 
         {/* CENTER */}
-        <div className="footer-center">{footerText[lang].footerReserve}</div>
+        <div className="footer-center">
+          {footerText[lang].footerReserve}
+          <br />
+          {lang == "de" && <span>Translated by DeepL</span>}
+        </div>
 
         {/* RIGHT */}
         <div className="footer-right">
